@@ -9,8 +9,8 @@ render ()
       <div>
       <div className="App">
         <div className="Elements">
-        <a href="/owleye-cyclopedia">Owl Eyes </a>
-        <a href="/owleye-cyclopedia/articles">Articles</a>
+        <a href="/">Owl Eyes </a>
+        <a href="/articles">Articles</a>
         </div>
         <div className="Auth">
       </div>

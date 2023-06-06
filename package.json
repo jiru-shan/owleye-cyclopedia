@@ -27,7 +27,7 @@
       "react-app/jest"
     ]
   },
-  "homepage": "https://jiru-shan.github.io/owleye-cyclopedia/",
+  "homepage": "https://jiru-shan.github.io/owleye-cyclopedia/#",
   "browserslist": {
     "production": [
       ">0.2%",
