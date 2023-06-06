@@ -40,6 +40,7 @@ a {
   transition-duration: 400ms;
   cursor: pointer;
   color: #F0F5FF;
+  align-items: center;
 }
 
 .Elements a:hover {
