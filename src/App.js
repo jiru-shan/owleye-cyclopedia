@@ -1,24 +1,30 @@
 import logo from './logo.svg';
 import './App.css';
+import NavBar from './components/NavBar/NavBar';
+import React from 'react';
+import  { Home }  from './views/Home';
+import { Route, Routes, BrowserRouter  } from 'react-router-dom';
+import { Helmet } from 'react-helmet'
+import { RedirectCheckProvider } from './views/RedirectCheck';
+import styles from './App.css'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <body className = {styles.body}>
+    <Helmet>
+        <title>ZippyPrints</title>
+        <meta name="description" content="A fast, easy to use, and reliable way for printing custom designs through printers near you!" />
+      </Helmet>
+        <NavBar />
+        <BrowserRouter>
+          <RedirectCheckProvider>
+            <Routes>
+              <Route exact path="/Home" element={<Home />} />
+              
+            </Routes>
+          </RedirectCheckProvider>
+        </BrowserRouter>
+        </body>
   );
 }
 
