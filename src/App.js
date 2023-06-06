@@ -1,11 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
-import NavBar from './components/NavBar/NavBar';
+import NavBar from './components/NavBar';
 import React from 'react';
 import  { Home }  from './views/Home';
+import {Articles} from './views/ArticleDisplay';
 import { Route, Routes, BrowserRouter  } from 'react-router-dom';
 import { Helmet } from 'react-helmet'
-import { RedirectCheckProvider } from './views/RedirectCheck';
 import styles from './App.css'
 
 function App() {
@@ -17,12 +17,10 @@ function App() {
       </Helmet>
         <NavBar />
         <BrowserRouter>
-          <RedirectCheckProvider>
             <Routes>
-              <Route exact path="/Home" element={<Home />} />
-              
+              <Route exact path="/" element={<Home />} />
+              <Route exact path="/Articles" element={<Articles />} />
             </Routes>
-          </RedirectCheckProvider>
         </BrowserRouter>
         </body>
   );

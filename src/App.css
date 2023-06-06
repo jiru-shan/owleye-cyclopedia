@@ -1,38 +1,206 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.body {
+  min-width: 100vw;
   min-height: 100vh;
+  overflow-x: hidden;
+  color: #fcfcfc;
+
+}
+
+.body p {
+  color: #fcfcfc;
+}
+
+a {
+  text-decoration: none;
+}
+
+.App {
+  background-color: #02142E;
+  display: flex;
+  flex-direction: row;
+  padding-left: 30px;
+  padding-right: 30px;
+  height: 100px;
+  align-items: center;
+}
+
+.Elements {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+}
+
+.Elements a {
+  margin-right: 2vw;
+  margin-left: 2vw;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+  transition-duration: 400ms;
+  cursor: pointer;
+  color: #F0F5FF;
+}
+
+.Elements a:hover {
+  transform: translateY(-2px);
+  color: #0B63E5;
+}
+
+.Auth {
+  height: 100px;
+  justify-self: flex-end;
+  display: flex;
+  flex-direction: row;
+  width: auto;
+  text-align: right;
+  justify-content: flex-end;
+  margin-right: 30px;
+}
+
+.Auth a {
+  text-transform: uppercase;
+  font-weight: 600;
+  transition-duration: 400ms;
+  cursor: pointer;
+  align-self: center;
+  margin-left: clamp(20px, 2vw, 50px);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.Login:hover {
+  background-color: #e0c699;
+  color: #001b2e;
+}
+
+.SignUp:hover {
+  transform: translateX(5px);
+}
+
+
+.SignUp {
+  background: #e0c699;
+  position: relative;
+}
+
+.SignUp p {
+  color: #001b2e;
+}
+
+.StartScreen {
+  margin: 0;
+  min-height: 100vh;
+  max-width: 100vw;
+  background-color: yellowgreen;
+  display: flex;
+  padding: 50px 40px;
+  overflow-x:hidden;
+  overflow-y:hidden;
+}
+
+.StartScreen div {
+  margin: 0;
+  width: 45vw;
+  height: 75vh;
+}
+
+.InfoBlurb {
+  background-color: black;
+  padding-left: 15px;
+}
+
+.InfoBlurb h1 {
+  font-size: xx-large;
+  color: #e0c699;
+  padding-left: 10px;
+  
+}
+
+.InfoBlurb p {
+  font-size: large;
+  color: #fcfcfc;
+  padding-left: 10px;
+}
+
+.InfoBlurb a {
+  font-size: large;
+  color: #fcfcfc;
+  padding-left: 10px;
+}
+
+
+.SignUpForm {
+  padding-left: 15px;
+  border-style: dashed;
+  border-radius: 5%;
+}
+
+.SignUpForm h1 {
+  font-size: 100px;
+  color: #fcfcfc;
+}
+
+.SignUpForm form {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.SignUpForm form input {
+  width: 300px;
+  height: 40px;
+  margin-bottom: 20px;
+  border-radius: 20%;
+  border-style: dotted;
+  border-color: black;
+  text-decoration-color: #fcfcfc;
+  font-size: x-large;
+}
+
+.InfoBlurb p {
+  font-size: large;
+  color: #fcfcfc;
+}
+
+.InfoBlurb a {
+  font-size: large;
+  color: #fcfcfc;
+}
+
+.Upload {
+  justify-self: flex-end;
+  display: flex;
+  flex-direction: row;
+  width: auto;
+  text-align: left;
+  justify-content: flex-end;
+  margin-right: 30px;
+}
+
+.UploadButton {
+  padding: 10px 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+  transition-duration: 400ms;
+  cursor: pointer;
+  color: #fcfcfc;
+  align-self: center;
+  margin-left: 40px;
+  width: 120px;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  border: 2px solid #fcfcfc;
 }
 
-.App-link {
-  color: #61dafb;
+.FormField {
+  flex-direction: row;
+  align-items: stretch;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
