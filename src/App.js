@@ -16,12 +16,10 @@ function App() {
         <meta name="description" content="A website for all things Owl-eyes." />
       </Helmet>
         <NavBar />
-        <HashRouter>
             <Routes>
               <Route exact path="/" element={<Home />} />
               <Route exact path="/Articles" element={<Articles />} />
             </Routes>
-        </HashRouter>
         </body>
   );
 }
