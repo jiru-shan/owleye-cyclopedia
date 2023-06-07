@@ -2,12 +2,12 @@
   min-width: 100vw;
   min-height: 100vh;
   overflow-x: hidden;
-  color: #fcfcfc;
+  color: #3a3333;
 
 }
 
 .body p {
-  color: #fcfcfc;
+  color: #484545;
 }
 
 a {
@@ -205,3 +205,110 @@ a {
   align-items: stretch;
 }
 
+.modal {
+  font-size: 12px;
+}
+.modal > .header {
+  width: 100%;
+  border-bottom: 1px solid gray;
+  font-size: 18px;
+  text-align: center;
+  padding: 5px;
+}
+.modal > .content {
+  width: 100%;
+  padding: 10px 5px;
+}
+.modal > .actions {
+  margin: auto;
+}
+.modal > .actions {
+  width: 100%;
+  padding: 10px 5px;
+  text-align: center;
+}
+
+.modal > .close {
+  cursor: pointer;
+  position: absolute;
+  display: block;
+  padding: 2px 5px;
+  right: -10px;
+  top: -10px;
+  font-size: 24px;
+  border-radius: 18px;
+  border: 1px solid #cfcece;
+  background-color: #fff;
+}
+
+.popup-menu {
+  display: flex;
+  flex-direction: column;
+  padding: 0px !important;
+}
+
+.popup-menu .menu-item {
+  cursor: pointer;
+  padding: 5px;
+}
+.popup-menu .menu-item:not(:first-child) {
+  border-top: 1px solid #e8e7e7;
+}
+html[data-theme='dark'] .menu-item:not(:first-child) {
+  border-top: 1px solid grey;
+}
+
+.popup-menu .menu-item:hover {
+  color: #2980b9;
+}
+
+
+.popup-content {
+  border-radius: 5px;
+  padding: 0.5rem;
+  background-color: rgb(41, 45, 62);
+  color: #fff;
+  border: 1px solid #464545;
+  width:50%;
+  height:80%;
+}
+.popup-arrow {
+  filter: drop-shadow(0 -3px 3px rgba(0, 0, 0, 0.16));
+  color: rgb(41, 45, 62);
+  stroke-width: 2px;
+  stroke: #464545;
+  stroke-dasharray: 30px;
+  stroke-dashoffset: -54px;
+}
+[role='tooltip'].popup-content {
+  width: 200px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 0px 3px;
+}
+
+.popup-overlay {
+  background: rgba(0, 0, 0, 0.5);
+}
+[data-popup='tooltip'].popup-overlay {
+  background: transparent;
+}
+
+.popup-content .button {
+  font-family: 'Roboto', Arial, sans-serif;
+  color: #000000;
+  cursor: pointer;
+  padding: 0px 30px;
+  display: inline-block;
+  margin: 10px 15px;
+  text-transform: uppercase;
+  line-height: 2em;
+  letter-spacing: 1.5px;
+  font-size: 1em;
+  outline: none;
+  position: relative;
+  font-size: 14px;
+  border: 3px dashed var(--ifm-link-color);
+  background-color: #ffffff;
+  /* border-radius: 15px 15px 15px 15px; */
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
