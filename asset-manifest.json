@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/owleye-cyclopedia/static/css/main.8b114044.css",
-    "main.js": "/owleye-cyclopedia/static/js/main.50e462b3.js",
+    "main.css": "/owleye-cyclopedia/static/css/main.2a414f79.css",
+    "main.js": "/owleye-cyclopedia/static/js/main.803e128d.js",
     "static/js/787.da0512d7.chunk.js": "/owleye-cyclopedia/static/js/787.da0512d7.chunk.js",
     "static/media/owl-eyes.jpg": "/owleye-cyclopedia/static/media/owl-eyes.848b46f61fd92db9a9e7.jpg",
     "index.html": "/owleye-cyclopedia/index.html",
-    "main.8b114044.css.map": "/owleye-cyclopedia/static/css/main.8b114044.css.map",
-    "main.50e462b3.js.map": "/owleye-cyclopedia/static/js/main.50e462b3.js.map",
+    "main.2a414f79.css.map": "/owleye-cyclopedia/static/css/main.2a414f79.css.map",
+    "main.803e128d.js.map": "/owleye-cyclopedia/static/js/main.803e128d.js.map",
     "787.da0512d7.chunk.js.map": "/owleye-cyclopedia/static/js/787.da0512d7.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8b114044.css",
-    "static/js/main.50e462b3.js"
+    "static/css/main.2a414f79.css",
+    "static/js/main.803e128d.js"
   ]
 }
