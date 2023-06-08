@@ -219,15 +219,15 @@ a {
 
 .secondRow
 {
-  padding-top: 8%;
+  padding-top: 6%;
 }
 .topRow
 {
-   padding-top: 5%;
+   padding-top: 4%;
 }
 .bottomRow
 {
-  padding-top: 8%;
+  padding-top: 6%;
 }
 
 .buttonBox
@@ -265,6 +265,17 @@ a {
 }
 .mainButton
 {
-  height:12vh;
-  width:12vh;
+  height:15vh;
+  width:15vh;
+  background-color: #02142E;
+}
+.mainButtonS
+{
+  height:13vh;
+  width:15vh;
+  background-color: #02142E;
+}
+.mainImage
+{
+  width:90%;
 }
