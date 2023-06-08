@@ -279,3 +279,15 @@ a {
 {
   width:90%;
 }
+.tooltipText
+{
+  color: yellow;
+}
+.writingParagraph
+{
+  display:inline
+}
+.analysis
+{
+  padding-top: 3%;
+}

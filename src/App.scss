@@ -19,7 +19,31 @@
     background-color: rgb(41, 45, 62);
   }
 
+  .modal-60w
+  {
+    width: 60%;
+    max-width: none !important;
+    height: 50% !important;
+    max-height: 50% !important;
+    background-color: rgb(41, 45, 62);
+    color: #fff;
+    border: 1px solid #464545;
+  }
+  .modal-60w .modal-content
+  {
+    width:100%;
+    height:100%;
+    max-height: none !important;
+    background-color: rgb(41, 45, 62);
+  }
+
   .modal-header .btn-close
   {
     color: #fff !important;
+  }
+  .modal-header .modal-title
+  {
+    justify-content: center;
+    align-items: center;
+    text-align: center !important;
   }
