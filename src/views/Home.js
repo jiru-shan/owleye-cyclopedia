@@ -43,7 +43,7 @@ function Home()
                     <div className='dividerSmall'></div>
                     <div>
                         <button className="mainButton" onClick={()=> setModalState(4)}>
-                            <Image src={'./resources/owl-eyes.jpg'} roundedCircle fluid/>
+                            <Image src={'https://png.pngtree.com/png-vector/20190411/ourmid/pngtree-vector-resume-icon-png-image_927259.jpg'} roundedCircle fluid/>
                         </button>
                     </div>
                     <div className='ms-auto '>
