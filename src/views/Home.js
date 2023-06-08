@@ -25,7 +25,7 @@ function Home()
     }
     const decreModalState = () => 
     {
-        if(modalState>=1)
+        if(modalState>=2)
         {
             setModalState(modalState-1)
         }
@@ -68,12 +68,14 @@ function Home()
                 Woohoo, you are reading this text in a modal!
                 </Modal.Body>
             <Modal.Footer>
-            <Button variant="primary" onClick={decreModalState}>
+            <Container className='buttonBox'>
+            <Button variant="outline-primary" onClick={decreModalState} disabled>
                 <ArrowLeft color="white" size={48} />
             </Button>
-            <Button variant="primary" onClick={increModalState}>
+            <Button variant="outline-primary" onClick={increModalState}>
                 <ArrowRight color="white" size={48}/>
             </Button>
+            </Container>
             </Modal.Footer>
       </Modal>
       <Modal show={modalState===2} onHide={()=> setModalState(0)} dialogClassName="modal-90w" centered={true}>
@@ -84,12 +86,14 @@ function Home()
                 Woohoo, you are reading this text in a modal 2!
                 </Modal.Body>
             <Modal.Footer>
-            <Button variant="primary" onClick={decreModalState}>
+            <Container className='buttonBox'>
+            <Button variant="outline-primary" onClick={decreModalState}>
                 <ArrowLeft color="white" size={48} />
             </Button>
-            <Button variant="primary" onClick={increModalState}>
+            <Button variant="outline-primary" onClick={increModalState}>
                 <ArrowRight color="white" size={48}/>
             </Button>
+            </Container>
             </Modal.Footer>
       </Modal>
       <Modal show={modalState===3} onHide={()=> setModalState(0)} dialogClassName="modal-90w" centered={true}>
@@ -100,12 +104,14 @@ function Home()
                 Woohoo, you are reading this text in a modal 3!
                 </Modal.Body>
             <Modal.Footer>
-            <Button variant="primary" onClick={decreModalState}>
+            <Container className='buttonBox'>
+            <Button variant="outline-primary" onClick={decreModalState}>
                 <ArrowLeft color="white" size={48} />
             </Button>
-            <Button variant="primary" onClick={increModalState}>
+            <Button variant="outline-primary" onClick={increModalState} disabled>
                 <ArrowRight color="white" size={48}/>
             </Button>
+            </Container>
             </Modal.Footer>
       </Modal>
 
