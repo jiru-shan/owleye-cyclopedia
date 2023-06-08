@@ -8,8 +8,10 @@ function Articles() {
     return (
       <body className='mainBackground'>
           <Container fluid>
-            <Row className="topRow">
-              <Col className="firstCol middleButtonStack">
+            <Row className="articleRow">
+              <Col className="firstCol">
+                  <Stack className="middleButtonStack" direction="horizontal">
+                      <div>
                       <Card style={{ width: '18rem' }}>
                         <Card.Body>
                           <Card.Title>Bio</Card.Title>
@@ -18,23 +20,6 @@ function Articles() {
                           Just the straight hard facts.
                           </Card.Text>
                           <Card.Link href="#/bio">Read Here</Card.Link>
-                        </Card.Body>
-                      </Card>
-              </Col>
-          </Row>
-
-            <Row className="topRow">
-              <Col className="firstCol">
-                  <Stack className="middleButtonStack" direction="horizontal">
-                      <div>
-                      <Card style={{ width: '18rem' }}>
-                        <Card.Body>
-                          <Card.Title>Character Relations</Card.Title>
-                          <Card.Subtitle className="mb-2 text-muted">Some Neat Facts</Card.Subtitle>
-                          <Card.Text>
-                          What are Owl-Eyes' connection to other characters?
-                          </Card.Text>
-                          <Card.Link href="#/relations">Read Here</Card.Link>
                         </Card.Body>
                       </Card>
                       </div>
