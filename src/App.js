@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import NavBar from './components/NavBar';
 import React from 'react';
@@ -7,6 +6,7 @@ import Articles from './views/ArticleDisplay';
 import { Route, Routes, HashRouter  } from 'react-router-dom';
 import { Helmet } from 'react-helmet'
 import styles from './App.css'
+import './App.scss';
 
 function App() {
   return (

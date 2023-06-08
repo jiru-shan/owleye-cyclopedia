@@ -1,57 +1,75 @@
-import React from 'react';
-import Popup from 'reactjs-popup';
+import React, { useState } from 'react';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Stack from 'react-bootstrap/Stack';
+import Modal from 'react-bootstrap/Modal';
+import Button from 'react-bootstrap/Button';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function Home() 
 {
+    const [modalState, setModalState]=useState(0);
+
+
+
+    const increModalState = () => 
+    {
+        setModalState(modalState+1)
+    }
+    const decreModalState = () => 
+    {
+        setModalState(modalState-1)
+    }
+
+
     return(
-    <div>
-    <Popup
-        trigger={<button className="button"> Open Modal </button>}
-        modal
-        nested>
-        {close => (
-        <div className="modal">
-            <button className="close" onClick={close}>
-            &times;
-            </button>
-            <div className="header"> Modal Title </div>
-            <div className="content">
-            {' '}
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, a nostrum.
-            Dolorem, repellat quidem ut, minima sint vel eveniet quibusdam voluptates
-            delectus doloremque, explicabo tempore dicta adipisci fugit amet dignissimos?
-            <br />
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur sit
-            commodi beatae optio voluptatum sed eius cumque, delectus saepe repudiandae
-            explicabo nemo nam libero ad, doloribus, voluptas rem alias. Vitae?
+    <body className='mainBackground'>
+    <Container fluid>
+        <Row className="firstRow">
+        <div>
+            <Col className="firstCol">
+                <Stack direction="horizontal" gap={3}>
+                    <div>
+                        <Button variant="primary" onClick={()=> setModalState(1)}>
+                            Launch demo modal
+                        </Button>
+                    </div>
+                    <div>
+                        <Button variant="primary" onClick={()=> setModalState(2)}>
+                            Launch demo modal
+                        </Button>
+                    </div>
+                    <div>
+                        <Button variant="primary" onClick={()=> setModalState(3)}>
+                            Launch demo modal
+                        </Button>
+                    </div>
+                </Stack>
+            </Col>
+            
             </div>
-            <div className="actions">
-            <Popup
-                trigger={<button className="button"> Trigger </button>}
-                position="top center"
-                nested
-            >
-                <span>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae
-                magni omnis delectus nemo, maxime molestiae dolorem numquam
-                mollitia, voluptate ea, accusamus excepturi deleniti ratione
-                sapiente! Laudantium, aperiam doloribus. Odit, aut.
-                </span>
-            </Popup>
-            <button
-                className="button"
-                onClick={() => {
-                console.log('modal closed ');
-                close();
-                }}
-            >
-                close modal
-            </button>
-            </div>
-        </div>
-        )}
-    </Popup>
-    </div>);
+        </Row>
+
+        <Modal show={modalState===1} onHide={()=> setModalState(0)} dialogClassName="modal-90w" centered={true}>
+            <Modal.Header closeButton closeVariant={"white"}>
+            <Modal.Title>Modal heading</Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+                Woohoo, you are reading this text in a modal!
+                </Modal.Body>
+            <Modal.Footer>
+            <Button variant="secondary" onClick={()=> setModalState(0)}>
+                Close
+            </Button>
+            <Button variant="primary" onClick={()=> setModalState(0)}>
+                Save Changes
+            </Button>
+            </Modal.Footer>
+      </Modal>
+
+    </Container>
+    </body>);
 }
 
 export default Home;
