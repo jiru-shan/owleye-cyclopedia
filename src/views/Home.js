@@ -8,6 +8,7 @@ import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { ArrowRight } from 'react-bootstrap-icons';
 import { ArrowLeft } from 'react-bootstrap-icons';
+import Image from 'react-bootstrap/Image';
 
 
 function Home() 
@@ -35,29 +36,74 @@ function Home()
     return(
     <body className='mainBackground'>
     <Container fluid>
-        <Row className="firstRow">
+
+        <Row className="topRow">
+            <Col className="firstCol">
+                <Stack direction="horizontal">
+                    <div className='dividerSmall'></div>
+                    <div>
+                        <button className="mainButton" onClick={()=> setModalState(4)}>
+                            <Image src={'./resources/owl-eyes.jpg'} roundedCircle fluid/>
+                        </button>
+                    </div>
+                    <div className='ms-auto '>
+                        <button className="mainButton" onClick={()=> setModalState(5)}>
+                            <Image src={'./resources/owl-eyes.jpg'} roundedCircle fluid/>
+                        </button>
+                    </div>
+                    <div className='dividerSmall'></div>
+                </Stack>
+            </Col>
+        </Row>
+
+        <Row className="secondRow">
         <div>
             <Col className="firstCol">
-                <Stack direction="horizontal" gap={3}>
+                <Stack className="middleButtonStack" direction="horizontal">
                     <div>
-                        <Button variant="primary" onClick={()=> setModalState(1)}>
-                            Launch demo modal
-                        </Button>
+                        <button className="mainButton" onClick={()=> setModalState(1)}>
+                            <Image src={'./resources/owl-eyes.jpg'} roundedCircle fluid/>
+                        </button>
+                    </div>
+                    <div className='divider'>
+                    <hr className='line'></hr>
                     </div>
                     <div>
-                        <Button variant="primary" onClick={()=> setModalState(2)}>
-                            Launch demo modal
-                        </Button>
+                        <button className="mainButton" onClick={()=> setModalState(2)}>
+                            <Image src={'./resources/owl-eyes.jpg'} roundedCircle fluid/>
+                        </button>
+                    </div>
+                    <div className='divider'>
+                    <hr className='line'></hr>
                     </div>
                     <div>
-                        <Button variant="primary" onClick={()=> setModalState(3)}>
-                            Launch demo modal
-                        </Button>
+                        <button className="mainButton" onClick={()=> setModalState(3)}>
+                        <Image src={'./resources/owl-eyes.jpg'} roundedCircle fluid/>
+                        </button>
                     </div>
                 </Stack>
             </Col>
             
             </div>
+        </Row>
+
+        <Row className="bottomRow">
+        <Col className="firstCol">
+                <Stack direction="horizontal">
+                    <div className='dividerSmall'></div>
+                    <div>
+                        <button className="mainButton" onClick={()=> setModalState(6)}>
+                            <Image src={'./resources/owl-eyes.jpg'} roundedCircle fluid/>
+                        </button>
+                    </div>
+                    <div className='ms-auto'>
+                        <button className="mainButton" onClick={()=> setModalState(7)}>
+                            <Image src={'./resources/owl-eyes.jpg'} roundedCircle fluid/>
+                        </button>
+                    </div>
+                    <div className='dividerSmall'></div>
+                </Stack>
+            </Col>
         </Row>
 
         <Modal show={modalState===1} onHide={()=> setModalState(0)} dialogClassName="modal-90w" centered={true}>
@@ -113,6 +159,39 @@ function Home()
             </Button>
             </Container>
             </Modal.Footer>
+      </Modal>
+
+      <Modal show={modalState===4} onHide={()=> setModalState(0)} dialogClassName="modal-90w" centered={true}>
+            <Modal.Header closeButton closeVariant={"white"}>
+            <Modal.Title>Modal heading</Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+                Woohoo, you are reading this text in a modal 4!
+                </Modal.Body>
+      </Modal>
+      <Modal show={modalState===5} onHide={()=> setModalState(0)} dialogClassName="modal-90w" centered={true}>
+            <Modal.Header closeButton closeVariant={"white"}>
+            <Modal.Title>Modal heading</Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+                Woohoo, you are reading this text in a modal 5!
+                </Modal.Body>
+      </Modal>
+      <Modal show={modalState===6} onHide={()=> setModalState(0)} dialogClassName="modal-90w" centered={true}>
+            <Modal.Header closeButton closeVariant={"white"}>
+            <Modal.Title>Modal heading</Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+                Woohoo, you are reading this text in a modal 6!
+                </Modal.Body>
+      </Modal>
+      <Modal show={modalState===7} onHide={()=> setModalState(0)} dialogClassName="modal-90w" centered={true}>
+            <Modal.Header closeButton closeVariant={"white"}>
+            <Modal.Title>Modal heading</Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+                Woohoo, you are reading this text in a modal 7!
+                </Modal.Body>
       </Modal>
 
     </Container>

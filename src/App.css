@@ -216,9 +216,18 @@ a {
     background-size: cover;
 }
 
-.firstRow
+
+.secondRow
 {
-  padding-top: 17%;
+  padding-top: 8%;
+}
+.topRow
+{
+   padding-top: 5%;
+}
+.bottomRow
+{
+  padding-top: 8%;
 }
 
 .buttonBox
@@ -226,4 +235,36 @@ a {
   display:flex;
   justify-content: center;
   align-items: center;
+}
+.middleButtonStack
+{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+.line
+{
+  opacity: 1;
+  border:0;
+  width:100%;
+  color:#336360;
+  background-color: #336360;
+  height:5px;
+}
+.dividerSmall
+{
+  width:7%;
+}
+.divider
+{
+  width:11%;
+}
+.dividerLarge
+{
+  width:17%;
+}
+.mainButton
+{
+  height:12vh;
+  width:12vh;
 }
