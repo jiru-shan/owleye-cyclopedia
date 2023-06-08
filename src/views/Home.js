@@ -6,6 +6,9 @@ import Stack from 'react-bootstrap/Stack';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { ArrowRight } from 'react-bootstrap-icons';
+import { ArrowLeft } from 'react-bootstrap-icons';
+
 
 function Home() 
 {
@@ -15,11 +18,17 @@ function Home()
 
     const increModalState = () => 
     {
-        setModalState(modalState+1)
+        if(modalState<=2)
+        {
+            setModalState(modalState+1)
+        }
     }
     const decreModalState = () => 
     {
-        setModalState(modalState-1)
+        if(modalState>=1)
+        {
+            setModalState(modalState-1)
+        }
     }
 
 
@@ -59,11 +68,43 @@ function Home()
                 Woohoo, you are reading this text in a modal!
                 </Modal.Body>
             <Modal.Footer>
-            <Button variant="secondary" onClick={()=> setModalState(0)}>
-                Close
+            <Button variant="primary" onClick={decreModalState}>
+                <ArrowLeft color="white" size={48} />
             </Button>
-            <Button variant="primary" onClick={()=> setModalState(0)}>
-                Save Changes
+            <Button variant="primary" onClick={increModalState}>
+                <ArrowRight color="white" size={48}/>
+            </Button>
+            </Modal.Footer>
+      </Modal>
+      <Modal show={modalState===2} onHide={()=> setModalState(0)} dialogClassName="modal-90w" centered={true}>
+            <Modal.Header closeButton closeVariant={"white"}>
+            <Modal.Title>Modal heading</Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+                Woohoo, you are reading this text in a modal 2!
+                </Modal.Body>
+            <Modal.Footer>
+            <Button variant="primary" onClick={decreModalState}>
+                <ArrowLeft color="white" size={48} />
+            </Button>
+            <Button variant="primary" onClick={increModalState}>
+                <ArrowRight color="white" size={48}/>
+            </Button>
+            </Modal.Footer>
+      </Modal>
+      <Modal show={modalState===3} onHide={()=> setModalState(0)} dialogClassName="modal-90w" centered={true}>
+            <Modal.Header closeButton closeVariant={"white"}>
+            <Modal.Title>Modal heading</Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+                Woohoo, you are reading this text in a modal 3!
+                </Modal.Body>
+            <Modal.Footer>
+            <Button variant="primary" onClick={decreModalState}>
+                <ArrowLeft color="white" size={48} />
+            </Button>
+            <Button variant="primary" onClick={increModalState}>
+                <ArrowRight color="white" size={48}/>
             </Button>
             </Modal.Footer>
       </Modal>
